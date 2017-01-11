@@ -1,6 +1,10 @@
 Promise Matchers
 ===
 
+[![CircleCI branch](https://img.shields.io/circleci/project/github/pietvanzoen/jasmine-promise-matcher/master.svg?style=flat-square)](https://circleci.com/gh/pietvanzoen/jasmine-promise-matcher/tree/master)
+
+Adds `toResolve` and `toReject` matchers to jasmine.
+
 ## toResolve
 
 ```js
@@ -63,3 +67,6 @@ it('fails when callback promise rejects', function(done) {
 });
 ```
 
+## TODO
+- [ ] Test and implement for browser environments.
+- [ ] Allow injection of custom `Promise` library.
