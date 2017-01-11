@@ -1,0 +1,22 @@
+{
+  "name": "jasmine-promise-matchers",
+  "version": "0.1.0",
+  "description": "Adds toResolve and toReject matchers for jasmine.",
+  "main": "index.js",
+  "author": "hi@pietvanzoen.com",
+  "scripts": {
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "test:watch": "watch 'npm test' ./lib ./test",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "node ."
+  },
+  "dependencies": {
+    "eslint": "^3.12.1",
+    "jasmine": "^2.5.2",
+    "jasmine-spec-reporter": "^3.1.0",
+    "lodash": "^4.12.0",
+    "watch": "^1.0.1"
+  },
+  "license": "MIT"
+}
