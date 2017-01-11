@@ -11,7 +11,7 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "node ."
   },
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^3.12.1",
     "jasmine": "^2.5.2",
     "jasmine-spec-reporter": "^3.1.0",
