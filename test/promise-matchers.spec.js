@@ -1,10 +1,11 @@
 var _ = require('lodash');
-require('../lib/promise-matcher');
+require('../lib/promise-matchers');
 
 function testPromiseMatcher(promiseType) {
   var matcherName = 'to' + _.startCase(promiseType);
   var oppositePromiseType = promiseType === 'resolve' ? 'reject' : 'resolve';
-  describe('to' + _.startCase(promiseType), function() {
+  describe(matcherName, function() {
+
     it('passes with ' + _.trim(promiseType, 'e') + 'ed promises', function(done) {
       expect(Promise[promiseType]())[matcherName](done);
     });

@@ -1,1 +1,1 @@
-require('./lib/promise-matcher');
+require('./lib/promise-matchers');

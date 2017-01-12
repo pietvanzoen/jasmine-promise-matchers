@@ -1,7 +1,7 @@
 Promise Matchers
 ===
 
-[![CircleCI branch](https://img.shields.io/circleci/project/github/pietvanzoen/jasmine-promise-matcher/master.svg?style=flat-square)](https://circleci.com/gh/pietvanzoen/jasmine-promise-matcher/tree/master)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/pietvanzoen/jasmine-promise-matchers/master.svg?style=flat-square)](https://circleci.com/gh/pietvanzoen/jasmine-promise-matchers/tree/master)
 
 Adds `toResolve` and `toReject` matchers to jasmine.
 
