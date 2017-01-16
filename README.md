@@ -5,6 +5,16 @@ Promise Matchers
 
 Adds `toResolve` and `toReject` matchers to jasmine.
 
+## Installation
+
+```js
+var promiseMatchers = require('jasmine-promise-matchers');
+
+beforeEach(function() {
+  promiseMatchers.install(jasmine);
+});
+```
+
 ## toResolve
 
 ```js
@@ -70,3 +80,4 @@ it('fails when callback promise rejects', function(done) {
 ## TODO
 - [ ] Test and implement for browser environments.
 - [ ] Allow injection of custom `Promise` library.
+- [ ] Use jasmines `addMatchers` function to install

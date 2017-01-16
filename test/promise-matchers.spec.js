@@ -1,5 +1,9 @@
 var _ = require('lodash');
-require('../lib/promise-matchers');
+var promiseMatchers = require('../lib/promise-matchers');
+
+beforeEach(function() {
+  promiseMatchers.install(jasmine);
+});
 
 function testPromiseMatcher(promiseType) {
   var matcherName = 'to' + _.startCase(promiseType);
