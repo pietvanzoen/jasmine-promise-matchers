@@ -1,6 +1,6 @@
 {
   "name": "jasmine-promise-matchers",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Adds toResolve and toReject matchers for jasmine.",
   "main": "index.js",
   "author": "hi@pietvanzoen.com",
