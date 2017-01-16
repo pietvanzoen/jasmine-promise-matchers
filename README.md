@@ -102,3 +102,15 @@ it('fails when callback promise rejects', function(done) {
 - [ ] Test and implement for browser environments.
 - [x] Allow injection of custom `Promise` library.
 - [ ] Use jasmines `addMatchers` function to install
+
+## Contributing
+
+Don't be shy! Submit issues (or better yet PRs) if you see anything that could be better. If you're submitting code that contains patches or features please try to include unit tests. Thanks!
+
+## Author
+
+Piet van Zoen hi@pietvanzoen.com
+
+## License
+
+MIT : http://opensource.org/licenses/MIT
