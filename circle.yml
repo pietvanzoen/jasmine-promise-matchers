@@ -13,7 +13,7 @@ dependencies:
         echo "The correct version of Yarn is already installed."
       fi
   override:
-    - yarn install
+    - yarn install --ignore-engines
   cache_directories:
     - ~/.yarn
     - ~/.cache/yarn
