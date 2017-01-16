@@ -7,15 +7,36 @@ Adds `toResolve` and `toReject` matchers to jasmine.
 
 ## Installation
 
+```bash
+$ npm install --save-dev @pietvanzoen/jasmine-promise-matchers
+```
+
+## Usage
+
+Install the promise matchers using the `install` method.
 ```js
-var promiseMatchers = require('jasmine-promise-matchers');
+var promiseMatchers = require('@pietvanzoen/jasmine-promise-matchers');
 
 beforeEach(function() {
   promiseMatchers.install(jasmine);
 });
 ```
 
-## toResolve
+When using a non-native implementation of promises you can pass your `Promise` constructor as an option.
+```js
+var promiseMatchers = require('@pietvanzoen/jasmine-promise-matchers');
+var RSVP = require('rsvp');
+
+beforeEach(function() {
+  promiseMatchers.install({
+    jasmine: jasmine,
+    Promise: RSVP.Promise
+  });
+});
+
+```
+
+### toResolve
 
 ```js
 it('passes when promise resolves', function(done) {
@@ -29,7 +50,7 @@ it('fails when promise rejects', function(done) {
 });
 ```
 
-## toReject
+### toReject
 
 ```js
 it('passes when promise rejects', function(done) {
@@ -43,7 +64,7 @@ it('fails when promise resolves', function(done) {
 });
 ```
 
-## callbacks
+### callbacks
 
 ```js
 it('passes promise response to callback', function(done) {
@@ -53,7 +74,7 @@ it('passes promise response to callback', function(done) {
 });
 ```
 
-### callback returning a promise
+#### callback returning a promise
 
 ```js
 it('callback can return a promise', function(done) {
@@ -79,5 +100,5 @@ it('fails when callback promise rejects', function(done) {
 
 ## TODO
 - [ ] Test and implement for browser environments.
-- [ ] Allow injection of custom `Promise` library.
+- [x] Allow injection of custom `Promise` library.
 - [ ] Use jasmines `addMatchers` function to install
