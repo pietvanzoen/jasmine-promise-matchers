@@ -10,14 +10,12 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "start": "node .",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "postinstall": "node node_modules/husky/bin/install",
-    "commitmsg": "validate-commit-msg"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
     "condition-circle": "^1.5.0",
     "eslint": "^3.12.1",
-    "husky": "^0.12.0",
+    "git-hooks": "^1.1.7",
     "jasmine": "^2.5.2",
     "jasmine-spec-reporter": "^3.1.0",
     "lodash": "^4.12.0",
@@ -36,8 +34,19 @@
   },
   "config": {
     "validate-commit-msg": {
-      "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "chore", "revert"],
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
       "maxSubjectLength": 72
     }
-  }
+  },
+  "dependencies": {}
 }
