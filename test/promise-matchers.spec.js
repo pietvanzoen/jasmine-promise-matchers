@@ -104,5 +104,14 @@ function testPromiseMatcher(promiseType) {
       }).toThrowError(/Expected a promise but got/);
     });
 
+    it('errors are pretty printed', function(done) {
+      var dn = done.fail;
+      dn.fail = function(report) {
+        expect(report).toContain('Error: foo');
+        done();
+      };
+      expect(Promise[oppositePromiseType](new Error('foo')))[matcherName](dn);
+    });
+
   });
 }
